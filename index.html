@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     name="viewport">
-  <title>Woody Devices</title>
+  <title>woodyA</title>
 
   <!-- PWA & Shortcut Icon Metadata -->
   <link rel="manifest" href="manifest.json">
@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#fbf9f9">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Woody">
+  <meta name="apple-mobile-web-app-title" content="woodyA">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -336,7 +336,7 @@
         the offline cache.
       ======================================================================
     */
-    const APP_VERSION = "v1.29";
+    const APP_VERSION = "A29";
     <!-- antigravity sync test -->
 
     function ensureEmptySlotBuffer(data) {
@@ -369,14 +369,14 @@
     }
 
     function loadStore() {
-      const raw = localStorage.getItem("fleet_ledger_data");
+      const raw = localStorage.getItem("fleet_ledger_data_A");
       let data = raw ? JSON.parse(raw) : { slots: [], devices: [] };
       return ensureEmptySlotBuffer(data);
     }
 
     function saveStore(data) {
       ensureEmptySlotBuffer(data);
-      localStorage.setItem("fleet_ledger_data", JSON.stringify(data));
+      localStorage.setItem("fleet_ledger_data_A", JSON.stringify(data));
     }
 
     let globalStore = loadStore();
@@ -1143,7 +1143,7 @@
       const hh = pad(now.getHours());
       const min = pad(now.getMinutes());
       const ss = pad(now.getSeconds());
-      return `fleet_export_${yyyy}${mm}${dd}_${hh}${min}${ss}`;
+      return `fleet_export_A_${yyyy}${mm}${dd}_${hh}${min}${ss}`;
     }
 
     function clearTransferInputs() {
@@ -1273,7 +1273,7 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "fleet_reset.json";
+      a.download = "fleet_reset_A.json";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

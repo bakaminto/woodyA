@@ -1,6 +1,6 @@
 {
-  "name": "Woody Devices",
-  "short_name": "Woody",
+  "name": "woodyA",
+  "short_name": "woodyA",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#fbf9f9",
